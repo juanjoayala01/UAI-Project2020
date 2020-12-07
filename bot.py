@@ -19,11 +19,12 @@ class Bot:
         self.options.add_argument("--headless")
         self.options.add_argument("--disable-dev-shm-usage")
         self.options.add_argument("--no-sandbox")
-        #self.driver = webdriver.Chrome(executable_path=os.environ.get("CHROME_DRIVER_PATH"), chrome_options=self.options)
-        self.driver = webdriver.Chrome(executable_path="chromedriver.exe")
+        self.driver = webdriver.Chrome(executable_path=os.environ.get("CHROME_DRIVER_PATH"), chrome_options=self.options)
+        #self.driver = webdriver.Chrome(executable_path="chromedriver.exe")
 
     def signin(self, username, password):
         self.driver.get("https://www.google.cl")
+        print(self.driver.page_source)
         print(username)
         print(password)
 
