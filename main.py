@@ -3,11 +3,10 @@ import instapy
 from instapy import InstaPy
 from instapy import smart_run
 
-GECKODRIVER_PATH = "/app/vendor/geckodriver/geckodriver"
+
 
 session = InstaPy(username="pytesting01",
                   password="456852jj",
-                  browser_executable_path=GECKODRIVER_PATH,
                   headless_browser=False,
                   multi_logs=True)
 
